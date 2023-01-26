@@ -9,3 +9,10 @@
     <input id="name" [(ngModel)]="hero.name" placeholder="name">    
 
 </div>
+
+<ul class="heroes" *ngFor="let hero1 of heroes; let c = count">
+    {{c}}
+    {{hero1.id}}
+    {{hero1.name}}
+
+</ul>
