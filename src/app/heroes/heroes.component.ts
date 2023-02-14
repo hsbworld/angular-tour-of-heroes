@@ -18,7 +18,8 @@ export class HeroesComponent {
 
   heroes : Hero[] = [];
 
-  constructor(private heroService: HeroService, private messageService: MessageService){
+  // constructor(private heroService: HeroService, private messageService: MessageService){
+     constructor(private heroService: HeroService){
 
   }
 
@@ -34,7 +35,7 @@ export class HeroesComponent {
     this.heroService.getHeroes()
         .subscribe(heroes => this.heroes = heroes);
   }
-  
+
   // heroes = HEROES;
 
   selectedHero ?: Hero;
