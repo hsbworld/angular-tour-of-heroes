@@ -26,23 +26,23 @@ export class HeroesComponent {
   //   this.heroes = this.heroService.getHeroes();
   // }    
 
+  ngOnInit() {
+    this.getHeroes();
+  }
+
   getHeroes(): void {
     this.heroService.getHeroes()
         .subscribe(heroes => this.heroes = heroes);
   }
   
-  ngOnInit() {
-    this.getHeroes();
-  }
-
   // heroes = HEROES;
 
   selectedHero ?: Hero;
 
-  onSelectHero(hero: Hero) {
-    this.selectedHero = hero;
-    // this.messageService.add(`Hero ${hero.name} clicked`);
-    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
-  }
+  // onSelectHero(hero: Hero) {
+  //   this.selectedHero = hero;
+  //   // this.messageService.add(`Hero ${hero.name} clicked`);
+  //   this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
+  // }
 
 }
